@@ -16,12 +16,12 @@ from aria2p import API as ariaAPI, Client as ariaClient
 from qbittorrentapi import Client as qbClient
 from socket import setdefaulttimeout
 from logging import getLogger, Formatter, FileHandler, StreamHandler, INFO, ERROR, basicConfig, error as log_error, info as log_info, warning as log_warning
-from uvloop import install
+#from uvloop import install
 
 #from faulthandler import enable as faulthandler_enable
 #faulthandler_enable()
 
-install()
+#install()
 setdefaulttimeout(600)
 
 pyroutils.MIN_CHAT_ID = -999999999999
