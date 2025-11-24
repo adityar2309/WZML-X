@@ -8,6 +8,14 @@ from web.nodes import make_tree
 
 app = Flask(__name__)
 
+@app.route("/health")
+def health():
+    return "OK", 200
+
+@app.route("/")
+def index():
+    return "OK - WZML-X Running", 200
+
 aria2 = ariaAPI(ariaClient(host="http://localhost", port=6800, secret=""))
 
 basicConfig(format="[%(asctime)s] [%(levelname)s] - %(message)s",
